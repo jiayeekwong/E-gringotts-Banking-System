@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1280.0" styleClass="root2" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="e.gringotts.TransactionHistoryAdminController">
+  
+   <children>
+      <ImageView fitHeight="773.0" fitWidth="1288.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-123.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0" />
+      <BorderPane layoutX="-2.0" prefHeight="650.0" prefWidth="1307.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <DatePicker fx:id="endDate" layoutX="296.0" layoutY="156.0" opacity="0.71" prefHeight="25.0" prefWidth="120.0" promptText="Enter End Date" style="-fx-opacity: 0.8;" />
+                  <TableView fx:id="table" layoutX="150.0" layoutY="239.0" opacity="0.7" prefHeight="411.0" prefWidth="963.0" style="-fx-background-radius: 20px 20px 20px 20px; -fx-opacity: 0.8;" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="200.0">
+                     <columns>
+                        <TableColumn fx:id="coluser" prefWidth="66.39999389648438" text="User Id" />
+                        <TableColumn fx:id="coltr" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="256.79998779296875" text="Transaction Id" />
+                        <TableColumn fx:id="colsn" maxWidth="261.3333435058594" minWidth="1.33331298828125" prefWidth="104.80001831054688" text="Sender Name" />
+                        <TableColumn fx:id="colrn" minWidth="0.0" prefWidth="124.79998779296875" text="Receiver Name" />
+                        <TableColumn fx:id="colam" prefWidth="148.0" text="Amount" />
+                        <TableColumn fx:id="colda" minWidth="0.0" prefWidth="134.6666259765625" text="Date" />
+                        <TableColumn fx:id="colca" minWidth="80.0" prefWidth="139.33331298828125" text="Category" />
+                     </columns>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="95.33333333333333" layoutY="-21.0" prefHeight="93.0" prefWidth="859.0" text="Transaction History " textAlignment="CENTER" textFill="#efecec" AnchorPane.leftAnchor="95.33333333333333" AnchorPane.rightAnchor="76.0">
+                     <font>
+                        <Font name="Curlz MT" size="96.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="startDate" layoutX="150.0" layoutY="156.0" opacity="0.7" prefHeight="25.0" prefWidth="128.0" promptText="Enter Start Date" style="-fx-opacity: 0.8;" AnchorPane.leftAnchor="160.0" />
+                  <TextField fx:id="filterField" layoutX="735.0" layoutY="151.0" opacity="0.73" prefHeight="31.0" prefWidth="144.0" promptText="Search" AnchorPane.rightAnchor="160.0" />
+                  <FontAwesomeIconView fx:id="buttonRefresh" fill="#fcafaf" glyphName="REFRESH" layoutX="429.0" layoutY="175.0" onMouseClicked="#clear" size="20" text="" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="126.0" prefHeight="22.0" prefWidth="176.0" style="-fx-background-color: #000000; -fx-background-radius: 15px;" text="Amount Threshold : " textAlignment="CENTER" textFill="#ef8888">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="min" alignment="CENTER" layoutX="288.0" layoutY="124.0" opacity="0.71" prefHeight="26.0" prefWidth="55.0" promptText="Min" style="-fx-opacity: 0.8;" />
+                  <TextField fx:id="max" alignment="CENTER" layoutX="366.0" layoutY="123.0" opacity="0.71" prefHeight="26.0" prefWidth="57.0" promptText="Max" style="-fx-opacity: 0.8;" />
+                  <Label layoutX="348.0" layoutY="117.0" text="-" textFill="#fbf5f5">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="homebox" layoutY="-3.0" onMouseClicked="#JumpToMenu" onMouseExited="#leaveHome" onMouseMoved="#moveToHome" opacity="0.61" prefHeight="34.0" prefWidth="177.0" style="-fx-background-radius: 0px 20px20px0px; -fx-background-color: #000000;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconHome" fill="#ede8e8" glyphName="HOME" selectionFill="#f6f5f5" size="25" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelHome" alignment="CENTER" prefHeight="41.0" prefWidth="92.0" style="-fx-opacity: 1;" text="HOME" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="filterUserId" layoutX="820.0" layoutY="151.0" opacity="0.73" prefHeight="32.0" prefWidth="144.0" promptText="Search User Id" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

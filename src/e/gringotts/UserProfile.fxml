@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1280.0" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@CascadeStyleSheet.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane opacity="0.67" prefHeight="650.0" prefWidth="217.0" styleClass="menu_Design">
+         <children>
+            <VBox layoutY="131.0" prefHeight="314.0" prefWidth="212.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <HBox fx:id="homebox" onMouseClicked="#JumpToHome" onMouseExited="#leaveHome" onMouseMoved="#moveToHome" prefHeight="34.0" stylesheets="@CascadeStyleSheet.css">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconHome" fill="WHITE" glyphName="HOME" size="25" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="25.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelHome" alignment="CENTER" prefHeight="54.0" prefWidth="63.0" text="HOME" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Book Antiqua Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="transactionBox" onMouseClicked="#JumpToTransaction" onMouseExited="#leaveTransaction" onMouseMoved="#moveToTransaction" prefHeight="27.0" prefWidth="119.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconTransaction" fill="#ede8e8" glyphName="BANK" size="22" text="" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="24.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelTransaction" alignment="CENTER" prefHeight="38.0" prefWidth="118.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="TRANSACTION" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Book Antiqua Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="currencyBox" onMouseClicked="#JumpToCurrency" onMouseExited="#leaveCurrency" onMouseMoved="#moveToCurrency" prefHeight="29.0" prefWidth="101.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconCurrency" fill="#ede8e8" glyphName="MONEY" size="22" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="25.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelCurrency" alignment="CENTER" prefHeight="45.0" prefWidth="90.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="CURRENCY" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="historyBox" onMouseClicked="#JumpToTransactionHistory" onMouseExited="#leaveHistory" onMouseMoved="#moveToHistory" prefHeight="29.0" prefWidth="101.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconHistory" fill="WHITE" glyphName="HISTORY" size="22" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="30.0" top="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelHistory" alignment="CENTER" prefHeight="38.0" prefWidth="77.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="HISTORY" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="insightBox" prefHeight="29.0" prefWidth="101.0" stylesheets="@CascadeStyleSheet.css">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconInsight" fill="#ede8e8" glyphName="BOOK" size="22" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelInsight" alignment="CENTER" prefHeight="53.0" prefWidth="73.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="INSIGHT" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <HBox fx:id="profileBox" prefHeight="27.0" prefWidth="119.0" styleClass="selection" stylesheets="@CascadeStyleSheet.css">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconProfile" fill="#ede8e8" glyphName="USER" size="22" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelProfile" alignment="CENTER" prefHeight="31.0" prefWidth="78.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="PROFILE" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="logoutBox" onMouseClicked="#LogOut" onMouseExited="#leaveLogout" onMouseMoved="#moveToLogout" prefHeight="27.0" prefWidth="119.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconLogout" fill="#ede8e8" glyphName="SIGN_OUT" size="25" styleClass="sidebar_opt" tabSize="10" text="">
+                           <HBox.margin>
+                              <Insets left="30.0" right="28.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelLogout" alignment="CENTER" prefHeight="42.0" prefWidth="76.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="LOG OUT" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="ProfilePic" fitHeight="179.0" fitWidth="186.0" layoutX="723.0" layoutY="41.0" opacity="0.84" pickOnBounds="true" preserveRatio="true" styleClass="profile" />
+      <Label alignment="CENTER" layoutX="398.0" layoutY="240.0" prefHeight="34.0" prefWidth="106.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" text="Username" textFill="#911212">
+         <font>
+            <Font name="Book Antiqua Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelContact" alignment="CENTER" layoutX="522.0" layoutY="300.0" prefHeight="34.0" prefWidth="590.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" textFill="#911212">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="398.0" layoutY="300.0" prefHeight="34.0" prefWidth="106.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" text="Contact" textFill="#911212">
+         <font>
+            <Font name="Book Antiqua Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAddress" alignment="CENTER" layoutX="522.0" layoutY="361.0" prefHeight="34.0" prefWidth="590.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" textFill="#911212">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="398.0" layoutY="361.0" prefHeight="34.0" prefWidth="106.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" text="Address" textFill="#911212">
+         <font>
+            <Font name="Book Antiqua Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelUserType" alignment="CENTER" layoutX="521.0" layoutY="421.0" prefHeight="34.0" prefWidth="590.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" textFill="#911212">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="398.0" layoutY="421.0" prefHeight="34.0" prefWidth="106.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" text="UserType" textFill="#911212">
+         <font>
+            <Font name="Book Antiqua Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="updateName" layoutX="1135.0" layoutY="240.0" mnemonicParsing="false" onAction="#updateName" prefHeight="44.0" prefWidth="54.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="REFRESH" size="20" />
+         </graphic>
+      </Button>
+      <Button fx:id="updateContact" layoutX="1135.0" layoutY="301.0" mnemonicParsing="false" onAction="#updateContact" prefHeight="44.0" prefWidth="54.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="REFRESH" size="20" />
+         </graphic>
+      </Button>
+      <Button fx:id="updateAddress" layoutX="1135.0" layoutY="362.0" mnemonicParsing="false" onAction="#updateAddress" prefHeight="44.0" prefWidth="54.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="REFRESH" size="20" />
+         </graphic>
+      </Button>
+      <Button fx:id="updateUserType" layoutX="1135.0" layoutY="422.0" mnemonicParsing="false" onAction="#updateUserType" prefHeight="44.0" prefWidth="54.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="REFRESH" size="20" />
+         </graphic>
+      </Button>
+      <Label fx:id="labelUsername" alignment="CENTER" layoutX="522.0" layoutY="240.0" prefHeight="34.0" prefWidth="590.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" textFill="#911212">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

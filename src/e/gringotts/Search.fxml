@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="1265.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="e.gringotts.SearchController">
+
+   <children>
+      <MediaView fx:id="backgroundMediaView" fitHeight="656.0" fitWidth="1280.0" layoutX="5.0" layoutY="7.0" />
+      <Label fx:id="label" contentDisplay="BOTTOM" graphicTextGap="18.0" layoutX="401.0" layoutY="31.0" minHeight="16" minWidth="69" prefHeight="50.0" prefWidth="346.0" text="Search Your Magician..." textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Blackadder ITC" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="357.0" layoutY="100.0" prefHeight="50.0" prefWidth="386.0" promptText="Enter the user name or contact no">
+         <font>
+            <Font name="Blackadder ITC" size="18.0" />
+         </font></TextField>
+      <Button fx:id="searchuser" layoutX="752.0" layoutY="102.0" mnemonicParsing="false" onAction="#searchUser" prefHeight="47.0" prefWidth="106.0" text="Search">
+         <font>
+            <Font name="Blackadder ITC" size="18.0" />
+         </font></Button>
+      <TableView fx:id="Table" layoutX="357.0" layoutY="161.0" prefHeight="73.0" prefWidth="374.0">
+        <columns>
+          <TableColumn fx:id="col1" prefWidth="121.60003662109375" text="Name" />
+          <TableColumn fx:id="col2" prefWidth="138.4000244140625" text="Contact No." />
+            <TableColumn fx:id="col3" prefWidth="112.79998779296875" text="User Type" />
+        </columns>
+      </TableView>
+      <Button fx:id="maketransaction" layoutX="752.0" layoutY="174.0" mnemonicParsing="false" onAction="#showAmount" prefHeight="45.0" prefWidth="122.0" styleClass="box" stylesheets="@CascadeStyleSheet.css" text="Transaction">
+         <font>
+            <Font name="Blackadder ITC" size="20.0" />
+         </font></Button>
+      <TextField fx:id="amount" layoutX="357.0" layoutY="353.0" prefHeight="50.0" prefWidth="210.0" promptText="Enter the amount..." visible="false">
+         <font>
+            <Font name="Blackadder ITC" size="18.0" />
+         </font></TextField>
+      <Button fx:id="comfirm" layoutX="582.0" layoutY="353.0" mnemonicParsing="false" onAction="#addTransaction" prefHeight="50.0" prefWidth="90.0" text="Comfirm" visible="false">
+         <font>
+            <Font name="Blackadder ITC" size="18.0" />
+         </font></Button>
+      <ChoiceBox fx:id="Choicebox" layoutX="357.0" layoutY="417.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="pin" layoutX="357.0" layoutY="248.0" prefHeight="50.0" prefWidth="150.0" promptText="Enter your pin" visible="false" />
+      <Button fx:id="okpin" layoutX="527.0" layoutY="251.0" mnemonicParsing="false" onAction="#showTransactionPin" prefHeight="43.0" prefWidth="46.0" text="OK" visible="false" />
+      <PasswordField fx:id="pinhidden" layoutX="357.0" layoutY="248.0" prefHeight="50.0" prefWidth="150.0" promptText="Enter your pin" visible="false" />
+      <CheckBox fx:id="showPin" layoutX="357.0" layoutY="305.0" mnemonicParsing="false" onAction="#showPin" prefHeight="34.0" prefWidth="90.0" text="show pin" visible="false" />
+      <AnchorPane layoutY="1.0" opacity="0.67" prefHeight="663.0" prefWidth="230.0" styleClass="menu_Design" stylesheets="@CascadeStyleSheet.css">
+         <children>
+            <VBox layoutY="131.0" prefHeight="314.0" prefWidth="212.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <HBox fx:id="homebox" onMouseClicked="#JumpToHome" onMouseExited="#leaveHome" onMouseMoved="#moveToHome" prefHeight="34.0" stylesheets="@CascadeStyleSheet.css">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconHome" fill="WHITE" glyphName="HOME" size="25" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="25.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelHome" alignment="CENTER" prefHeight="54.0" prefWidth="63.0" text="HOME" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="transactionBox" prefHeight="27.0" prefWidth="119.0" styleClass="selection" stylesheets="@CascadeStyleSheet.css">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconTransaction" fill="#ede8e8" glyphName="BANK" size="22" text="" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="24.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelTransaction" alignment="CENTER" prefHeight="38.0" prefWidth="118.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="TRANSACTION" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Book Antiqua Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="currencyBox" onMouseClicked="#JumpToCurrency" onMouseExited="#leaveCurrency" onMouseMoved="#moveToCurrency" prefHeight="29.0" prefWidth="101.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconCurrency" fill="#ede8e8" glyphName="MONEY" size="22" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="25.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelCurrency" alignment="CENTER" prefHeight="45.0" prefWidth="90.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="CURRENCY" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="historyBox" onMouseClicked="#JumpToTransactionHistory" onMouseExited="#leaveHistory" onMouseMoved="#moveToHistory" prefHeight="29.0" prefWidth="101.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconHistory" fill="WHITE" glyphName="HISTORY" size="22" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="30.0" top="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelHistory" alignment="CENTER" prefHeight="38.0" prefWidth="77.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="HISTORY" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="insightBox" onMouseClicked="#JumpToInsight" onMouseExited="#leaveInsight" onMouseMoved="#moveToInsight" prefHeight="29.0" prefWidth="101.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconInsight" fill="#ede8e8" glyphName="BOOK" size="22" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelInsight" alignment="CENTER" prefHeight="53.0" prefWidth="73.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="INSIGHT" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <HBox fx:id="profileBox" onMouseClicked="#JumpToAccount" onMouseExited="#leaveProfile" onMouseMoved="#moveToProfile" prefHeight="27.0" prefWidth="119.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconProfile" fill="#ede8e8" glyphName="USER" size="22" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets left="30.0" right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelProfile" alignment="CENTER" prefHeight="31.0" prefWidth="78.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="PROFILE" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="logoutBox" onMouseClicked="#LogOut" onMouseExited="#leaveLogout" onMouseMoved="#moveToLogout" prefHeight="27.0" prefWidth="119.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconLogout" fill="#ede8e8" glyphName="SIGN_OUT" size="25" styleClass="sidebar_opt" tabSize="10" text="">
+                           <HBox.margin>
+                              <Insets left="30.0" right="28.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="labelLogout" alignment="CENTER" prefHeight="42.0" prefWidth="76.0" styleClass="labelMenu" stylesheets="@CascadeStyleSheet.css" text="LOG OUT" textFill="#fbf7f7">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

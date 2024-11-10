@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="1280.0" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="e.gringotts.Account">
+   <children>
+      <TextField fx:id="passwordText" layoutX="750.0" layoutY="293.0" prefHeight="69.0" prefWidth="319.0" promptText="Password" styleClass="textfield_Login" stylesheets="@CascadeStyleSheet.css">
+         <font>
+            <Font name="Book Antiqua Bold" size="23.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Username" layoutX="749.0" layoutY="207.0" prefHeight="70.0" prefWidth="319.0" promptText="Username" styleClass="textfield_Login" stylesheets="@CascadeStyleSheet.css">
+         <font>
+            <Font name="Book Antiqua Bold" size="23.0" />
+         </font>
+      </TextField>
+      <CheckBox fx:id="showPss" layoutX="912.0" layoutY="376.0" mnemonicParsing="false" onAction="#showPss" prefHeight="40.0" prefWidth="154.0" styleClass="checkbox" stylesheets="@CascadeStyleSheet.css" text="Show Password">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="Loginbutton" layoutX="845.0" layoutY="429.0" onAction="#login" prefHeight="60.0" prefWidth="130.0" styleClass="textfield_Login" stylesheets="@CascadeStyleSheet.css" text="Login">
+         <font>
+            <Font name="Book Antiqua Bold" size="23.0" />
+         </font></Button>
+      <Button fx:id="regBtn" layoutX="839.0" layoutY="503.0" onAction="#JumpToSceneRegister" prefHeight="70.0" prefWidth="142.0" styleClass="textfield_Login" stylesheets="@CascadeStyleSheet.css" text="Register">
+         <font>
+            <Font name="Book Antiqua Bold" size="23.0" />
+         </font></Button>
+      <PasswordField fx:id="passwordHidden" layoutX="749.0" layoutY="292.0" prefHeight="70.0" prefWidth="319.0" promptText="Password" styleClass="textfield_Login" stylesheets="@CascadeStyleSheet.css">
+         <font>
+            <Font name="Book Antiqua Bold" size="23.0" />
+         </font>
+      </PasswordField>
+      <StackPane layoutX="416.0" layoutY="95.0" prefHeight="178.0" prefWidth="187.0" />
+      <ImageView fitHeight="170.0" fitWidth="194.0" layoutX="816.0" pickOnBounds="true" preserveRatio="true" styleClass="rounded-image-view">
+         <image>
+            <Image url="@GringiottsIcon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label" layoutX="801.0" layoutY="170.0" prefHeight="31.0" prefWidth="296.0" styleClass="labelMessage" stylesheets="@CascadeStyleSheet.css" textAlignment="CENTER" />
+      <VBox prefHeight="656.0" prefWidth="541.0">
+         <children>
+            <HBox prefHeight="293.0" prefWidth="542.0" styleClass="mediaBackground" stylesheets="@CascadeStyleSheet.css">
+               <children>
+                  <MediaView fx:id="VideoPlayer" fitHeight="300.0" fitWidth="540.0" styleClass="mediaFrame">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </MediaView>
+               </children>
+            </HBox>
+            <Label fx:id="description" contentDisplay="TEXT_ONLY" prefHeight="337.0" prefWidth="561.0" styleClass="label_description" stylesheets="@CascadeStyleSheet.css" textFill="#b9a9a9">
+               <font>
+                  <Font name="Book Antiqua" size="15.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <FontAwesomeIconView fill="#9c3232" glyphName="USER" layoutX="701.0" layoutY="260.0" size="50" wrappingWidth="16.800048828125" />
+      <FontAwesomeIconView fill="#9c3232" glyphName="KEY" layoutX="701.0" layoutY="341.0" size="40" />
+   </children>
+</AnchorPane>

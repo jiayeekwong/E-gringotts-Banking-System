@@ -1,0 +1,128 @@
+.root {
+    -fx-background-image: url("backgroundImage.jpg");
+    -fx-background-size: cover; 
+    -fx-background-position: center center;
+}
+
+.root2 {
+    -fx-background-image: url("AdminBackground.jpg");
+    -fx-background-size: cover; 
+    -fx-background-position: center center;
+}
+
+.checkbox{
+   -fx-background-color: #9E1A1A;  
+    -fx-text-fill: #FFD700;          
+    -fx-font-size: 13px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 20px;
+    -fx-border-width: 2px;
+}
+.textfield_Login{
+   -fx-background-color: #9E1A1A;  
+    -fx-text-fill: #FFD700;          
+    -fx-font: 23px "Book Antiqua";
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-border-width: 2px;
+}
+.rounded-image-view {
+    -fx-padding: 10px; /* Padding around the image */
+    -fx-background-color: white; /* Background color for visibility */
+    -fx-background-radius: 50%; /* Rounded background */
+    -fx-border-width: 2px; 
+    -fx-border-radius: 50%; /*round border*/
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 10, 0.25 , 0 , 1 ); /* shadow effect */
+   
+}
+.label_Login{
+    -fx-text-fill: #FFD700; 
+    -fx-text-alignment: center;
+    -fx-font-size: 13px;
+}
+.colored-border {
+    -fx-border-width: 2px;       /* Border width */
+    -fx-border-radius: 5px;      /* Optional: rounded corners */
+    -fx-padding: 5px;            /* Padding inside the label */
+    -fx-font-size: 15px;
+    -fx-text-fill: #FF9F66; 
+}
+.mediaFrame {
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0.25, 0, 1); /* Shadow effect */
+    -fx-opacity: 0.85;
+}
+.mediaBackground{
+    -fx-background-color: #ffffff;
+    -fx-border-width: 5px; /* Border width */
+    -fx-border-radius: 15px; /* Rounded corners */
+    -fx-background-radius: 15px; /* Match the border radius */
+    -fx-opacity: 0.85;
+}
+
+.label_description{
+    -fx-background-color: #000000; 
+    -fx-background-radius: 15px;
+     -fx-text-fill: #b9a9a9; 
+     -fx-font: 15px  "Book Antiqua";
+    -fx-text: left;
+    -fx-padding: 0px 0px 0px 10px;
+    -fx-opacity: 0.75;
+    
+}
+.label_design1{
+    -fx-background-color: #EADBC8;
+    -fx-background-radius: 0px 0px30px30px;
+}
+.menu_Design{
+    -fx-background-color: #000000;
+    -fx-background-radius: 0px30px30px0px;
+}
+.label_design2{
+    -fx-background-color: #EADBC8;
+    -fx-background-radius: 20px 20px 20px 20px;
+}
+.labelMessage{
+     -fx-text-fill: #FFD700; 
+    -fx-text-alignment: center;
+    -fx-font-size: 15px;
+}
+.labelMenu{
+     -fx-text-fill: #FFFFFF; 
+}
+.selection{
+    -fx-background-color: #a68c8c;
+    -fx-border-color: #000000;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+.textfield_Regiater{
+   -fx-background-color: #9E1A1A;  
+    -fx-text-fill: #FFD700;          
+    -fx-font: 16px "Book Antiqua";
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-border-width: 2px;
+}
+.receiptView{
+    -fx-opacity: 0.60;
+}
+
+.Receipt{
+     -fx-text-fill: #000000; 
+     -fx-font: 20px  "Book Antiqua";
+     -font-weight: bold;
+    -fx-text: left;
+    -fx-padding: 0px 0px 0px 10px;
+    -fx-opacity: 1.0;
+    
+}
+.profile{
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);
+    -fx-border-color: gray;
+    -fx-border-width: 2px;
+    -fx-background-radius: 75px;
+    -fx-clip: circle
+}
+ 
+                          

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="739.0" styleClass="root2" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="e.gringotts.UpdateCurrencyController">
+   <children>
+      <Label fx:id="addNewCurrencyLabel" alignment="CENTER" layoutX="257.0" layoutY="53.0" prefHeight="30.0" prefWidth="256.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" text="Update Currency">
+         <font>
+            <Font name="Times New Roman Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="realmLabel" alignment="CENTER" layoutX="108.0" layoutY="139.0" prefHeight="24.0" prefWidth="154.0" styleClass="label_design2" text="From Currency:">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fromCurrencyTF" layoutX="288.0" layoutY="128.0" prefHeight="46.0" prefWidth="226.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label fx:id="realmLabel1" alignment="CENTER" layoutX="107.0" layoutY="200.0" prefHeight="24.0" prefWidth="154.0" styleClass="label_design2" text="To Currency:">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="toCurrencyTF" layoutX="288.0" layoutY="189.0" prefHeight="46.0" prefWidth="226.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="rateTF" layoutX="288.0" layoutY="246.0" prefHeight="46.0" prefWidth="226.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="processingFeeTF" layoutX="288.0" layoutY="324.0" prefHeight="46.0" prefWidth="226.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label fx:id="realmLabel11" alignment="CENTER" layoutX="107.0" layoutY="257.0" prefHeight="24.0" prefWidth="154.0" styleClass="label_design2" text="Rate:">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="realmLabel111" alignment="CENTER" layoutX="106.0" layoutY="335.0" prefHeight="24.0" prefWidth="154.0" styleClass="label_design2" text="Processing Fee:">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="288.0" layoutY="292.0" text="Note: 1 From Currency = ? To Currency">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="updatedLabel" alignment="CENTER" layoutX="71.0" layoutY="410.0" prefHeight="20.0" prefWidth="463.0" styleClass="label_design2" visible="false">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="565.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnUpdateClicked" prefHeight="38.0" prefWidth="73.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" text="Update">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="565.0" layoutY="436.0" mnemonicParsing="false" onAction="#JumpToMenu" prefHeight="38.0" prefWidth="73.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" text="Exit">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

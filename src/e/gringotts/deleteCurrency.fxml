@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="747.0" styleClass="root2" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="e.gringotts.deleteCurrencyController">
+   <children>
+      <Label fx:id="addNewCurrencyLabel" alignment="CENTER" layoutX="243.0" layoutY="42.0" prefHeight="30.0" prefWidth="246.0" styleClass="label_design2" text="Remove Currency" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="realmLabel" alignment="CENTER" layoutX="148.0" layoutY="164.0" prefHeight="24.0" prefWidth="98.0" styleClass="label_design2" text="Currency:">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="104.0" layoutY="393.0" prefHeight="18.0" prefWidth="540.0" styleClass="label_design2" stylesheets="@CascadeStyleSheet.css" text="Note: Removing the currency will remove all the information related to that currency." textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="removeCurrencyTF" layoutX="260.0" layoutY="153.0" prefHeight="46.0" prefWidth="254.0" styleClass="label_Login" stylesheets="@CascadeStyleSheet.css">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </TextField>
+      <Button fx:id="removeBtn" alignment="CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnRemoveClicked" styleClass="label_design2" text="Remove">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="260.0" layoutY="313.0" mnemonicParsing="false" onAction="#JumpToMenu" prefHeight="30.0" prefWidth="76.0" styleClass="label_design2" text="Exit">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
